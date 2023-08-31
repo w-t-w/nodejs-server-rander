@@ -1,0 +1,50 @@
+{
+  "name": "nodejs-server-render",
+  "version": "0.0.1",
+  "description": "nodejs server render",
+  "main": "index.js",
+  "scripts": {
+    "ssr": "webpack --config=./backend/webpack.ssr.js --color",
+    "component": "webpack --config=./component/webpack.component.js --color",
+    "build": "webpack --config=./frontend/webpack.config.js --color",
+    "server": "node ./backend/rpc/start.js",
+    "client": "node ./backend/client/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/w-t-w/nodejs-server-render.git"
+  },
+  "keywords": [
+    "nodejs",
+    "server",
+    "render"
+  ],
+  "author": "wtw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w-t-w/nodejs-server-render/issues"
+  },
+  "homepage": "https://github.com/w-t-w/nodejs-server-render#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.14",
+    "@babel/preset-react": "^7.22.5",
+    "@types/node": "^20.5.7",
+    "babel-loader": "^9.1.3",
+    "core-js": "^3.32.1",
+    "easy_sock": "^0.4.1",
+    "koa": "^2.14.2",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0",
+    "nodemon": "^3.0.1",
+    "protocol-buffers": "^5.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": ["defaults"]
+}
